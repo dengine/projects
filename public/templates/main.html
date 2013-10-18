@@ -1,0 +1,31 @@
+<h1><%= lang.messages.welcome %></h1>
+<p><%= lang.messages.welcomeContent %></p>
+
+<b><%= lang.messages.error %></b>
+
+<script src="js/3rd/jnotifier.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function generateMessage() {
+        var mContent = '<%= lang.messages.welcomeContent %>';
+        var mOptions = {};
+
+        // ttl
+        mOptions.lifeTime = 7000;
+
+        // cb click
+        if ($('#form-message-cb-click').prop('checked')) {
+            mOptions.click = function() {  }
+        }
+        // cb clock
+        if ($('#form-message-cb-close').prop('checked')) {
+            mOptions.close = function() {  }
+        }
+
+        $.jnotify('<%= lang.messages.welcome %>', mContent, 'image.jpg', mOptions);
+    }
+</script>
+
+<div id="notifier-box"></div><br>
+<button class="uk-button uk-button-primary" onclick="generateMessage(); return false">jNotify</button>
+

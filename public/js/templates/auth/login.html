@@ -1,0 +1,15 @@
+<h2><i class="uk-icon-signin"></i> <%= lang.labels.buttons.signIn %></h2>
+
+<form action="/login" method="post" class="uk-panel-box uk-panel-box-primary">
+    <p>
+        <label for="username"><%= lang.labels.formInput.username %></label><br>
+        <input type="text" name="username" id="username"/>
+    </p>
+    <p>
+        <label for="password"><%= lang.labels.formInput.pass %></label><br>
+        <input type="password" name="password" id="password"/>
+    </p>
+    <p>
+        <button id="enter" class="uk-button uk-button-success"><%= lang.labels.buttons.signIn %></button>
+    </p>
+</form>
